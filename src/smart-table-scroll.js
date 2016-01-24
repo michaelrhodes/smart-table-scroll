@@ -24,7 +24,15 @@
 "use strict";
 
 //
-var _sortedIndex = require('lodash.sortedindex');
+function _sortedIndex (array, value) {
+  var low = 0, mid = 0, high = array.length
+  while (low < high) {
+    mid = low + (high - low >> 1)
+    if (array[mid] < value) low = mid + 1
+    else high = mid
+  }
+  return low
+}
 
 //
 var defaults = {

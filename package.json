@@ -24,9 +24,6 @@
     "url": "https://github.com/cmpolis/smart-table-scroll/issues"
   },
   "homepage": "https://github.com/cmpolis/smart-table-scroll",
-  "dependencies": {
-    "lodash.sortedindex": "^3.1.1"
-  },
   "devDependencies": {
     "browserify": "^11.0.1",
     "serve": "^1.4.0",
