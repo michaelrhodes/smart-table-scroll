@@ -43,6 +43,7 @@ var defaults = {
 
 //
 var ScrollableTable = function(opts) {
+  if(!(this instanceof ScrollableTable)) { return new ScrollableTable(opts); }
   if(!opts.el) { throw new Error("Need to pass `el` into ScrollableTable."); }
   if(!opts.data) { throw new Error("Need to pass `data` into ScrollableTable."); }
   if(!opts.buildRow) { throw new Error("Need to pass `buildRow` into ScrollableTable."); }
