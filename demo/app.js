@@ -1,17 +1,17 @@
 //
 //
 // Demo of SmartTableScroll
-
+var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
 var table = window.table = new SmartTableScroll({
 
   //
   el: document.querySelector('#table-target'),
 
   //
-  data: _.range(1e6).map(function(ndx) {
+  data: Array(1e6).join(' ').split('').map(function(s, ndx) {
     return {
       index: ndx,
-      color: _.sample(['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']),
+      color: colors[~~(Math.random() * colors.length)],
       random: Math.ceil(Math.random() * 100)
     };
   }),
